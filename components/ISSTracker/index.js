@@ -43,10 +43,10 @@ export default function ISSTracker() {
   
   return (
     <main>
-      <Map longitude={data.longitude} latitude={data.latitude} />
+      <Map longitude={data?.longitude ?? 0} latitude={data?.latitude?? 0} />
       <Controls
-        longitude={data.longitude}
-        latitude={data.latitude}
+        longitude={data?.longitude?? 0}
+        latitude={data?.latitude?? 0}
         onRefresh={() => mutate()}
       />
     </main>
